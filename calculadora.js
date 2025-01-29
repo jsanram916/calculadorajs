@@ -1,9 +1,22 @@
-function sumar(a, b) {
-    return a + b;
+// calculadora.js
+
+function suma(a, b) {
+  return a + b;
 }
 
-function restar(a, b) {
-    return a - b;
+function resta(a, b) {
+  return a - b;
 }
 
-module.exports = { sumar, restar };  // Exportamos las funciones para usarlas en pruebas
+function multiplicar(a, b) {
+  return a * b;
+}
+
+function dividir(a, b) {
+  if (b === 0) {
+    throw new Error("No se puede dividir por cero");
+  }
+  return a / b;
+}
+
+module.exports = { suma, resta, multiplicar, dividir };

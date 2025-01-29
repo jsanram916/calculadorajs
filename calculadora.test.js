@@ -1,9 +1,14 @@
-const { sumar, restar } = require('./calculadora');
+// calculadora.test.js
+const { suma, resta, multiplicar, dividir } = require('./calculadora');
 
-test('Suma 2 + 3 y devuelve 5', () => {
-    expect(sumar(2, 3)).toBe(5);
+test('Multiplicar 2 y 3 da 6', () => {
+  expect(multiplicar(2, 3)).toBe(6);
 });
 
-test('Resta 5 - 3 y devuelve 2', () => {
-    expect(restar(5, 3)).toBe(2);
+test('Dividir 6 entre 2 da 3', () => {
+  expect(dividir(6, 2)).toBe(3);
+});
+
+test('Dividir por cero debe lanzar un error', () => {
+  expect(() => dividir(6, 0)).toThrow("No se puede dividir por cero");
 });
