@@ -18,6 +18,9 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
+      - name: Instalar Jest globalmente
+        run: npm install -g jest 
+
       - name: Verificar instalación de Jest
         run: npx jest --version
 
